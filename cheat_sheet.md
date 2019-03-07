@@ -28,7 +28,7 @@ cd django_tdd_pyenv
 python -m venv /path/to/django_tdd/django_tdd_pyenv
 Scripts\activate
 ```
-To close environment type:
+To close environment type :
 ```
 (pyenv) /path/to/django_tdd> deactivate
 ```
@@ -123,8 +123,31 @@ git config user.name
 ```
 **Git Branching**
 
-git push --set-upstream origin functional_tests
+Show branches, create a new branch, and push to new branch :
+```
+git branch
+git checkout -b <name-of-new-branch>
+git push --set-upstream <name-of-new-branch>
+```
 
+Merging with master branch :
+
+
+Deleting a branch :
+```
+git branch -d <name-of-new-branch>
+```
+
+
+
+**Fixing Untracked files (.gitignore) and Re-sync orgin with master**
+```
+git rm -r --cached .
+git add .
+git commit -m "fixed untracked files"
+git push
+git status
+```
 ##
 
 :calendar:Last Updated on 6-MAR-2019
