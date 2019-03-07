@@ -107,7 +107,7 @@ git push -u origin master
 Check GitHub to verify the previous commit succeded and commit and push again:
 ```
 git status
-git commit -am "Second commit"
+git commit -am "First commit"
 git push
 ```
 
@@ -121,7 +121,9 @@ Show value of user.name:
 ```
 git config user.name
 ```
+**Git Branching**
 
+git push --set-upstream origin functional_tests
 
 ##
 
