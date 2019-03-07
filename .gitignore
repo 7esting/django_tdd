@@ -1,5 +1,6 @@
 django_tdd
 pyenv
+images
 .vscode
 geckodriver.log
 .DS_Store
