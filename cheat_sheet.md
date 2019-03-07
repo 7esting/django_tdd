@@ -5,7 +5,7 @@ Preparege a python virtual environment and create a simple django app.
 Tasks
 - [x] Setup Python virtual environment
 - [x] Create Django procject
-- [x] Create Django procject
+- [x] Create GitHub repository
 - [ ] Create Django app
 - [ ] Setup backend database
 
@@ -47,11 +47,11 @@ pip install selenium==3.141.0
 
 In the Django framework what is Projects vs. apps
 
-`What’s the difference between a project and an app? An app is a Web application that does something – e.g., a Weblog system, a database of public records or a simple poll app. A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.
+#####What’s the difference between a project and an app? An app is a Web application that does something – e.g., a Weblog system, a database of public records or a simple poll app. A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.
 
-https://docs.djangoproject.com/en/2.1/intro/tutorial01/`
+#####https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 
-Create the Django project:
+Create the Django project :
 ```
 cd /path/to/src
 mkdir django_tdd
@@ -61,7 +61,7 @@ mkdir ft
 cd ft
 ```
 
-Create ft directory for functional test script(s):
+Create ft directory for functional test script(s) :
 ```
 cd /path/to/src/django_tdd
 mkdir ft
@@ -73,7 +73,7 @@ Now create an app within the project:
 python manage.py startapp user_contacts
 ```
 
-Start the development server [port is optional]:
+Start the development server [port is optional] :
 ```
 python manage.py runserver [8080]
 ```
@@ -86,7 +86,7 @@ python manage.py runserver [8080]
 
 **Versioning: After creating the repo on GitHub**
 
-Initialize the project root and add files to master repo:
+Initialize the project root and add files to master repo :
 ```
 cd /path/to/django_tdd
 git init
@@ -95,7 +95,7 @@ git add .
 Create a .gitignore file and add the files and directoires that should not be synched or pushed to GitHub
 Also create a readme with markdown extension 'md' in wich the project is described.
 
-Perform the first sync or commit with GitHub:
+Perform the first sync or commit with GitHub :
 ```
 git add README.md
 git commit -m "first commit"
@@ -104,20 +104,20 @@ git remote add origin https://github.com/7esting/django_tdd.git
 git push -u origin master
 ```
 
-Check GitHub to verify the previous commit succeded and commit and push again:
+Check GitHub to verify the previous commit succeded and commit and push again :
 ```
 git status
 git commit -am "First commit"
 git push
 ```
 
-If push fails, check and set credentials on source host if needed.:
+If push fails, check and set credentials on source host if needed. :
 ```
 cd /path/to/django_tdd
 git config -l
 git config user.name ”7esting”
 ```
-Show value of user.name:
+Show value of user.name :
 ```
 git config user.name
 ```
