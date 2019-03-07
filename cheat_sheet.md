@@ -1,6 +1,6 @@
 ## 1.0 Cheat Sheet
 
-Preparege a python virtual environment and create a simple django app.
+Create a simple django app.
 
 Tasks
 - [x] Setup Python virtual environment
@@ -47,9 +47,9 @@ pip install selenium==3.141.0
 
 In the Django framework what is Projects vs. apps
 
-#####What’s the difference between a project and an app? An app is a Web application that does something – e.g., a Weblog system, a database of public records or a simple poll app. A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.
+>What’s the difference between a project and an app? An app is a Web application that does something – e.g., a Weblog system, a database of public records or a simple poll app. A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.
 
-#####https://docs.djangoproject.com/en/2.1/intro/tutorial01/
+>*https://docs.djangoproject.com/en/2.1/intro/tutorial01/*
 
 Create the Django project [Project root dir /path/to/src/django_tdd]:
 ```
@@ -129,10 +129,8 @@ cd /path/to/django_tdd
 git config -l
 git config user.name ”7esting”
 ```
-Show value of user.name :
-```
-git config user.name
-```
+Show value of user.name use `git config user.name`
+
 **Git Branching**
 
 Show branches, create a new branch, and push to new branch :
@@ -169,16 +167,15 @@ git commit -m "fixed untracked files"
 git push
 git status
 ```
+
+---
 ## Django Directory Structure
+
 Django Version 2.1.7
-
+```
 (env) /opt/SRC>django-admin startproject twitter
-
 (env) /opt/SRC/twitter>python manage.py startapp posts
-
 (env) /opt/SRC/twitter>python manage.py startapp poll
-
-
 /opt/SRC/pyenv/  <== Python virtual environment for Django
 
 /opt/SRC/twitter/  <== Project root directory
@@ -216,11 +213,8 @@ Django Version 2.1.7
     |
     \---__pycache__
             settings.cpython-37.pyc
-            __init__.cpython-37.pyc
-			
-			
-   % (desc, ENVIRONMENT_VARIABLE))
-django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+            __init__.cpython-37.pyc			
+```
 
 ##
 :calendar:Last Updated on 6-MAR-2019
