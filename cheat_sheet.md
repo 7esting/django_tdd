@@ -51,7 +51,7 @@ In the Django framework what is Projects vs. apps
 
 #####https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 
-Create the Django project :
+Create the Django project [Project root dir /path/to/src/django_tdd]:
 ```
 cd /path/to/src
 mkdir django_tdd
@@ -70,12 +70,24 @@ cd ft
 
 Now create an app within the project:
 ```
-python manage.py startapp user_contacts
+cd user_contacts
 ```
 
 Start the development server [port is optional] :
 ```
 python manage.py runserver [8080]
+```
+
+**Manage Database Backend**
+
+```
+(pyenv) /path/django_tdd/contacts>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+  Your models have changes that are not yet reflected in a migration, and so won't be applied.
+  Run 'python manage.py makemigrations' to make new migrations, and then re-run 'python manage.py migrate' to apply them.
 ```
 
 * python manage.py makemigrations    -- creates migration files based on your models
@@ -125,20 +137,29 @@ git config user.name
 
 Show branches, create a new branch, and push to new branch :
 ```
-git branch
+git branch -a
+git remote show origin
 git checkout -b <name-of-new-branch>
 git push --set-upstream <name-of-new-branch>
+-OR-
+git push origin <name-of-new-branch>
 ```
 
-Merging with master branch :
+Switch to another branch :
+```
+git checkout -b <another-branch>
+```
 
+Merging with master branch with <another-branch> or vice-versa :
+```
+git remote show origin
+git merge --no-ff <another-branch>
+```
 
 Deleting a branch :
 ```
 git branch -d <name-of-new-branch>
 ```
-
-
 
 **Fixing Untracked files (.gitignore) and Re-sync orgin with master**
 ```
@@ -148,6 +169,58 @@ git commit -m "fixed untracked files"
 git push
 git status
 ```
-##
+## Django Directory Structure
+Django Version 2.1.7
 
+(env) /opt/SRC>django-admin startproject twitter
+
+(env) /opt/SRC/twitter>python manage.py startapp posts
+
+(env) /opt/SRC/twitter>python manage.py startapp poll
+
+
+/opt/SRC/pyenv/  <== Python virtual environment for Django
+
+/opt/SRC/twitter/  <== Project root directory
+.
+|
++---manage.py
+|
++---poll/  <== App directory
+|   |   admin.py
+|   |   apps.py
+|   |   models.py
+|   |   tests.py
+|   |   views.py
+|   |   __init__.py
+|   |
+|   \---migrations
+|           __init__.py
+|
++---posts/  <== App directory
+|   |   admin.py
+|   |   apps.py
+|   |   models.py
+|   |   tests.py
+|   |   views.py
+|   |   __init__.py
+|   |
+|   \---migrations
+|           __init__.py
+|
+\---twitter  <== Django root directory
+    |   settings.py
+    |   urls.py
+    |   wsgi.py
+    |   __init__.py
+    |
+    \---__pycache__
+            settings.cpython-37.pyc
+            __init__.cpython-37.pyc
+			
+			
+   % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+
+##
 :calendar:Last Updated on 6-MAR-2019
