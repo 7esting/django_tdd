@@ -3,6 +3,8 @@ from selenium.webdriver.common.keys import Keys
 
 from django.test import LiveServerTestCase
 
+# Run test (../contacts>python manage.py test ft)
+
 class AdminTest(LiveServerTestCase):
 
     # load fixtures

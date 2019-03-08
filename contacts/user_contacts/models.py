@@ -1,7 +1,7 @@
 from django.db import models
 from user_contacts.validators import validate_string, validate_number
 
-# When you update models.py re-run (python manage.py makemigrations && python manage.py migrate)					  
+# When you update models.py re-run (../contacts>python manage.py makemigrations && python manage.py migrate)					  
 
 class Person(models.Model):
     first_name = models.CharField(max_length = 30, validators = [validate_string])
