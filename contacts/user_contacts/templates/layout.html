@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- Compiled and minified CSS -->
+     <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <title>Contacts</title>
+</head>
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="\static\images\code-icon.png" alt="Just an icon logo"></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">home</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="/">home</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+
+            <h1 class="header center orange-text">Address Book</h1>
+        </div>
+    
+    <div class="row center">
+        <h5 class="header col s12 light">
+        {% block detial %}
+        {% endblock %}
+        </h5>
+    </div>
+
+        <div class="row center">
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons"></i></h2>
+            <h5 class="center"></h5>
+        </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+          <!-- class='materials-icons">flash_on | settins</i><h2> -->
+            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+            <h5 class="center"></h5>
+        {% block content %}
+        {% endblock %}
+        </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+          <!-- class='materials-icons">flash_on | settins</i><h2> -->
+            <h2 class="center light-blue-text"><i class="material-icons"></i></h2>
+            <h5 class="center"></h5>
+        </div>
+        </div>
+
+        </div>
+    </div>
+    
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Footer -->
+    <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">hector.ddns.info</h5>
+          <p class="grey-text text-lighten-4">Thanks to Materialized for CSS and template.</p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">CSS</h5>
+          <ul>
+            <li><a class="white-text" href="https://materializecss.com/" target="_blank">Materialized</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Templates</h5>
+          <ul>
+            <li><a class="white-text" href="https://materializecss.com/templates/starter-template/preview.html" target="_blank">Starter Template</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Find code at GitHub <a class="orange-text text-lighten-3" href="https://github.com/7esting/django_tdd" target="_blank">django_tdd</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

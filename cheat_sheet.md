@@ -45,7 +45,7 @@ pip install selenium==3.141.0
 
 **Start Contacts Django project and review the directory structure**
 
-In the Django framework what is Projects vs. apps
+In the Django web framework what is Projects vs. apps
 
 >What’s the difference between a project and an app? An app is a Web application that does something – e.g., a Weblog system, a database of public records or a simple poll app. A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.
 
@@ -185,6 +185,12 @@ git status
 ## Django Project Directory Structure
 
 Django Version 2.1.7
+
+Django follows the MTV design pattern, where
+* **Model:** Data access layer - Anythin to do with interacting, relating and validating the data.
+* **Template:** Presentation layer - Presentation-related decisions
+* **View:** Business logic layer - Accesses the model and displays the appropriate template
+
 ```
 /SRC/pyenv/  <== Python virtual environment for Django
 (env) /SRC>django-admin startproject twitter
