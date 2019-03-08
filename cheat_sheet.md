@@ -153,7 +153,7 @@ git checkout -b <another-branch>
 Merging \<other-branch\> with master branch.
 Lets assume that we've been committing the latest changes to \<other-branch\>.
 1. Switch to master branch
-2. Merge <other-branch> with master
+2. Merge \<other-branch\> with master
 3. Add entire working directory to master
 4. Commit
 5. Push to GitHub
