@@ -1,6 +1,4 @@
-##1.0 README [<img src="images\Octocat.png" title="github">](https://github.com/7esting/)
-
-What's in this repo?
+##1.0 What's in this repo?
 
 Sample code from [Real Python](https://realpython.com/django-1-6-test-driven-development/) that demonstrates What is Test Driven Development.
 
