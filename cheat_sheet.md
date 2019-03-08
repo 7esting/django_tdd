@@ -101,6 +101,8 @@ Running migrations:
 Initialize the project root and add files to master repo :
 ```
 cd /path/to/django_tdd
+git help
+git help <command>
 git init
 git add -A
 ```
