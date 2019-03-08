@@ -186,10 +186,10 @@ git status
 
 Django Version 2.1.7
 ```
-(env) /opt/SRC>django-admin startproject twitter
-(env) /opt/SRC/twitter>python manage.py startapp posts
-(env) /opt/SRC/twitter>python manage.py startapp poll
-/opt/SRC/pyenv/  <== Python virtual environment for Django
+/SRC/pyenv/  <== Python virtual environment for Django
+(env) /SRC>django-admin startproject twitter
+(env) /SRC/twitter>python manage.py startapp posts
+(env) /SRC/twitter>python manage.py startapp poll
 
 /SRC/contacts/  <== Project root directory
 .
