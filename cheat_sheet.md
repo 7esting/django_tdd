@@ -204,12 +204,12 @@ Django Version 2.1.7
 |      __init__.py
 |   
 |
-+---ft  <== App directory (Functional Tests)
++---ft/  <== App directory (Functional Tests)
 |   |   geckodriver.log
 |   |   tests.py
 |   |   __init__.py
 |   |
-|   +---fixtures
+|   +---fixtures/
 |          admin.json
 |
 \---user_contacts/  <== App directory
@@ -226,16 +226,16 @@ Django Version 2.1.7
     |   views.py
     |   __init__.py
     |
-    +---migrations
+    +---migrations/
     |      0001_initial.py
     |      0002_auto_20190307_1757.py
     |      __init__.py
     |
-    +---static
-    |   \---images
+    +---static/
+    |   \---images/
     |           code-icon.png
     |
-    +---templates
+    +---templates/
            add.html
            all.html
            index.html
