@@ -182,7 +182,7 @@ git status
 ```
 
 ---
-## Django Directory Structure
+## Django Project Directory Structure
 
 Django Version 2.1.7
 ```
@@ -191,42 +191,54 @@ Django Version 2.1.7
 (env) /opt/SRC/twitter>python manage.py startapp poll
 /opt/SRC/pyenv/  <== Python virtual environment for Django
 
-/opt/SRC/twitter/  <== Project root directory
+/SRC/contacts/  <== Project root directory
 .
+|   db.sqlite3
+|   geckodriver.log
+|   manage.py
 |
-+---manage.py
++---contacts/  <== Django root directory
+|      settings.py
+|      urls.py
+|      wsgi.py
+|      __init__.py
+|   
 |
-+---poll/  <== App directory
-|   |   admin.py
-|   |   apps.py
-|   |   models.py
++---ft  <== App directory (Functional Tests)
+|   |   geckodriver.log
 |   |   tests.py
-|   |   views.py
 |   |   __init__.py
 |   |
-|   \---migrations
-|           __init__.py
+|   +---fixtures
+|          admin.json
 |
-+---posts/  <== App directory
-|   |   admin.py
-|   |   apps.py
-|   |   models.py
-|   |   tests.py
-|   |   views.py
-|   |   __init__.py
-|   |
-|   \---migrations
-|           __init__.py
-|
-\---twitter  <== Django root directory
-    |   settings.py
+\---user_contacts/  <== App directory
+    |   admin.py
+    |   apps.py
+    |   models.py
+    |   new_contact_form.py
+    |   tests.py
+    |   test_contact_form.py
+    |   test_validator.py
+    |   test_views.py
     |   urls.py
-    |   wsgi.py
+    |   validators.py
+    |   views.py
     |   __init__.py
     |
-    \---__pycache__
-            settings.cpython-37.pyc
-            __init__.cpython-37.pyc			
+    +---migrations
+    |      0001_initial.py
+    |      0002_auto_20190307_1757.py
+    |      __init__.py
+    |
+    +---static
+    |   \---images
+    |           code-icon.png
+    |
+    +---templates
+           add.html
+           all.html
+           index.html
 ```
 
 ##
