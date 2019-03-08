@@ -32,8 +32,7 @@
     
     <div class="row center">
         <h5 class="header col s12 light">
-        {% block detial %}
-        {% endblock %}
+        
         </h5>
     </div>
 
@@ -52,6 +51,8 @@
             <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
             <h5 class="center"></h5>
         {% block content %}
+          {% block subheader %}
+          {% endblock %}
         {% endblock %}
         </div>
         </div>

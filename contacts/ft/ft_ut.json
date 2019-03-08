@@ -1,0 +1,27 @@
+[
+    {
+      "Functional Tests": "test_admin_site",
+      "Description": "User logs into the admin page, then verifies a user is present",
+      "Unit Tests": "N/A. Testing pre-written code"
+    },
+    {
+      "Functional Tests": "test_create_contact_admin",
+      "Description": "User adds a new contact from the admin page",
+      "Unit Tests": "N/A. Testing pre-written code"
+    },
+    {
+      "Functional Tests": "test_create_contact",
+      "Description": "User adds a new contact successfully",
+      "Unit Tests": "[test_view_home_route, test_view_contacts_route, test_add_contact_route, test_create_contact_successful_route]"
+    },
+    {
+      "Functional Tests": "test_create_contact_admin_raise_error",
+      "Description": "User attempts to add a new contact but is unsuccessful (server side validation in model.py)",
+      "Unit Tests": "[test_string_is_invalid_if_contains_numbers_or_special_characters, test_number_is_invalid_if_contains_any_character_except_digits, test_create_contact_unsusccesful_route]"
+    },
+    {
+      "Functional Tests": "test_create_contact_error",
+      "Description": "User attempts to add a new contact but is unsuccessful (client side validation in form)",
+      "Unit Tests": "[test_string_is_invalid_if_contains_numbers_or_special_characters, test_number_is_invalid_if_contains_any_character_except_digits, test_create_contact_unsusccesful_route, test_if_valid_contact_is_saved, test_if_invalid_contact_is_not_saved]"
+    }
+  ]

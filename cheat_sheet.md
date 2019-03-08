@@ -245,6 +245,7 @@ Django follows the MTV design pattern, where
            add.html
            all.html
            index.html
+           layout.html
 ```
 
 ##
