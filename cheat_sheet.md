@@ -102,7 +102,7 @@ Initialize the project root and add files to master repo :
 ```
 cd /path/to/django_tdd
 git init
-git add .
+git add -A
 ```
 Create a .gitignore file and add the files and directoires that should not be synched or pushed to GitHub
 Also create a readme with markdown extension 'md' in wich the project is described.
@@ -148,10 +148,21 @@ Switch to another branch :
 git checkout -b <another-branch>
 ```
 
-Merging with master branch with <another-branch> or vice-versa :
+Merging <other-branch> with master branch :
+Lets assume that we've been committing the latests changes to <other-branch>.
+1. Switch to master branch
+2. Merge <other-branch> with master
+3. Add entire working directory to master
+4. Commit
+5. Push to GitHub
 ```
 git remote show origin
-git merge --no-ff <another-branch>
+git checkout master
+git merge <other-branch>
+git add -A
+git commit -am "Merged <other-branch> with master branch"
+git push
+git status
 ```
 
 Deleting a branch :
