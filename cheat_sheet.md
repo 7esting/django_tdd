@@ -154,7 +154,7 @@ Merging \<other-branch\> with master branch.
 Lets assume that we've been committing the latest changes to \<other-branch\>.
 1. Switch to master branch
 2. Merge \<other-branch\> with master
-3. Add entire working directory to master
+3. Add entire working directory/project root to master
 4. Commit
 5. Push to GitHub
 ```
@@ -169,13 +169,13 @@ git status
 
 Deleting a branch :
 ```
-git branch -d <name-of-new-branch>
+git branch -d <name-of-branch>
 ```
 
 **Fixing Untracked files (.gitignore) and Re-sync orgin with master**
 ```
 git rm -r --cached .
-git add .
+git add -A
 git commit -m "fixed untracked files"
 git push
 git status
