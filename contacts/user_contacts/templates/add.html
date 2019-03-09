@@ -4,13 +4,13 @@
   {% block subheader %}
     Add Contact
   {% endblock %}
-    <br>
-    <form action="/create" method ="POST" role="form">
-        {% csrf_token %}
-        {{ person_form.as_p }}
-        {{ phone_form.as_p }}
-        <input type ="submit" name ="Submit" class="btn btn-default" value ="Add">
-    </form>
+  <br>
+  <form action="/create" method ="POST" role="form">
+      {% csrf_token %}
+      {{ person_form.as_p }}
+      {{ phone_form.as_p }}
+      <input type ="submit" name ="Submit" class="btn btn-default" value ="Add">
+  </form>
       <br>
       <a href="/">Return Home</a>
 {% endblock %}
