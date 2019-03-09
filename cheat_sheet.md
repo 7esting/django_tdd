@@ -6,7 +6,7 @@ Tasks
 - [x] Setup Python virtual environment
 - [x] Create Django procject
 - [x] Create GitHub repository
-- [ ] Create Django app
+- [x] Create Django app
 - [ ] Setup backend database
 
 Usefull links:
@@ -20,17 +20,19 @@ python -m pip install --upgrade setuptools
 python -m pip install --upgrade pip
 ```
 
-**Create Python virtual environment**
+**Create Python virtual environment inside the Django Project root**
 ```
-cd /path/to/django_tdd/
-mkdir django_tdd_pyenv
-cd django_tdd_pyenv
-python -m venv /path/to/django_tdd/django_tdd_pyenv
+cd /path/to/src/django_tdd/
+mkdir pyenv
+cd pyenv
+python -m venv /path/to/src/django_tdd/pyenv
 Scripts\activate
+# OR in Linux
+source bin/activate
 ```
 To close environment type :
 ```
-(pyenv) /path/to/django_tdd> deactivate
+(pyenv) /path/to/src/django_tdd> deactivate
 ```
 
 **Prepare virtual environment**
@@ -192,60 +194,102 @@ Django follows the MTV design pattern, where
 * **View:** Business logic layer - Accesses the model and displays the appropriate template
 
 ```
-/SRC/pyenv/  <== Python virtual environment for Django
-(env) /SRC>django-admin startproject twitter
-(env) /SRC/twitter>python manage.py startapp posts
-(env) /SRC/twitter>python manage.py startapp poll
+/path/to/src/django_tdd/pyenv/  <== Python virtual environment for Django
+(env) /path/to/src/django_tdd/$ django-admin startproject contacts
+(env) /path/to/src/django_tdd/$ python manage.py startapp user_contacts
 
-/SRC/contacts/  <== Project root directory
+/path/to/src/  <== Project(s) root directory
+(pyenv) web@ubuntu:/path/to/src$
 .
-|   db.sqlite3
-|   geckodriver.log
-|   manage.py
-|
-+---contacts/  <== Django root directory
-|      settings.py
-|      urls.py
-|      wsgi.py
-|      __init__.py
-|   
-|
-+---ft/  <== App directory (Functional Tests)
-|   |   geckodriver.log
-|   |   tests.py
-|   |   __init__.py
-|   |
-|   +---fixtures/
-|          admin.json
-|
-\---user_contacts/  <== App directory
-    |   admin.py
-    |   apps.py
-    |   models.py
-    |   new_contact_form.py
-    |   tests.py
-    |   test_contact_form.py
-    |   test_validator.py
-    |   test_views.py
-    |   urls.py
-    |   validators.py
-    |   views.py
-    |   __init__.py
-    |
-    +---migrations/
-    |      0001_initial.py
-    |      0002_auto_20190307_1757.py
-    |      __init__.py
-    |
-    +---static/
-    |   \---images/
-    |           code-icon.png
-    |
-    +---templates/
-           add.html
-           all.html
-           index.html
-           layout.html
+└── django_tdd  <== django_tdd project root directory
+    ├── cheat_sheet.md
+    ├── contacts  <== Django project root directory
+    │   ├── contacts
+    │   │   ├── __init__.py
+    │   │   ├── settings.py
+    │   │   ├── urls.py
+    │   │   └── wsgi.py
+    │   ├── db.sqlite3
+    │   ├── ft  <== App directory (Functional Tests)
+    │   │   ├── fixtures
+    │   │   │   └── admin.json
+    │   │   ├── ft_ut.json
+    │   │   ├── __init__.py
+    │   │   └── tests.py
+    │   ├── manage.py
+    │   └── user_contacts  <== App directory
+    │       ├── admin.py
+    │       ├── apps.py
+    │       ├── __init__.py
+    │       ├── migrations
+    │       │   ├── 0001_initial.py
+    │       │   ├── 0002_auto_20190307_1757.py
+    │       │   └── __init__.py
+    │       ├── models.py
+    │       ├── new_contact_form.py
+    │       ├── static
+    │       │   └── images
+    │       ├── templates
+    │       │   ├── add.html
+    │       │   ├── all.html
+    │       │   ├── index.html
+    │       │   └── layout.html
+    │       ├── test_contact_form.py
+    │       ├── tests.py
+    │       ├── test_validator.py
+    │       ├── test_views.py
+    │       ├── urls.py
+    │       ├── validators.py
+    │       └── views.py
+    ├── pyenv
+    │   ├── bin
+    │   │   ├── activate
+    │   │   ├── activate.csh
+    │   │   ├── activate.fish
+    │   │   ├── django-admin
+    │   │   ├── django-admin.py
+    │   │   ├── easy_install
+    │   │   ├── easy_install-3.6
+    │   │   ├── pip
+    │   │   ├── pip3
+    │   │   ├── pip3.6
+    │   │   ├── __pycache__
+    │   │   │   └── django-admin.cpython-36.pyc
+    │   │   ├── python -> python3
+    │   │   └── python3 -> /usr/bin/python3
+    │   ├── include
+    │   ├── lib
+    │   │   └── python3.6
+    │   │       └── site-packages
+    │   ├── lib64 -> lib
+    │   ├── pyvenv.cfg
+    │   └── share
+    │       └── python-wheels
+    │           ├── appdirs-1.4.3-py2.py3-none-any.whl
+    │           ├── CacheControl-0.11.7-py2.py3-none-any.whl
+    │           ├── certifi-2018.1.18-py2.py3-none-any.whl
+    │           ├── chardet-3.0.4-py2.py3-none-any.whl
+    │           ├── colorama-0.3.7-py2.py3-none-any.whl
+    │           ├── distlib-0.2.6-py2.py3-none-any.whl
+    │           ├── distro-1.0.1-py2.py3-none-any.whl
+    │           ├── html5lib-0.999999999-py2.py3-none-any.whl
+    │           ├── idna-2.6-py2.py3-none-any.whl
+    │           ├── ipaddress-0.0.0-py2.py3-none-any.whl
+    │           ├── lockfile-0.12.2-py2.py3-none-any.whl
+    │           ├── packaging-17.1-py2.py3-none-any.whl
+    │           ├── pip-9.0.1-py2.py3-none-any.whl
+    │           ├── pkg_resources-0.0.0-py2.py3-none-any.whl
+    │           ├── progress-1.2-py2.py3-none-any.whl
+    │           ├── pyparsing-2.2.0-py2.py3-none-any.whl
+    │           ├── requests-2.18.4-py2.py3-none-any.whl
+    │           ├── retrying-1.3.3-py2.py3-none-any.whl
+    │           ├── setuptools-39.0.1-py2.py3-none-any.whl
+    │           ├── six-1.11.0-py2.py3-none-any.whl
+    │           ├── urllib3-1.22-py2.py3-none-any.whl
+    │           ├── webencodings-0.5-py2.py3-none-any.whl
+    │           └── wheel-0.30.0-py2.py3-none-any.whl
+    ├── README.md
+    └── requirements.txt
 ```
 
 ##
