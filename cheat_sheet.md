@@ -1,6 +1,6 @@
 ## 1.0 Cheat Sheet
 
-Create a simple django app.
+Simple django app thanks to [Real Python](https://realpython.com/), it has been very useful to me for learning how to create my first Django app.  I will also use this app to learn how to deploy apps to the cloud. Using Ansible and later Jenkins.
 
 Tasks
 - [x] Setup Python virtual environment
@@ -9,7 +9,7 @@ Tasks
 - [x] Create Django app
 - [ ] Setup backend database
 
-Usefull links:
+Links:
 * https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 * YouTube video crash course in Django (https://youtu.be/D6esTdOLXh4)
 
