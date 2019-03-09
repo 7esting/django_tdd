@@ -20,7 +20,7 @@ python -m pip install --upgrade setuptools
 python -m pip install --upgrade pip
 ```
 
-**Create Python virtual environment inside the Django Project root**
+**Create Python virtual environment inside the Project(s) root directory**
 ```
 cd /path/to/src/django_tdd/
 mkdir pyenv
