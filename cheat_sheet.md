@@ -27,7 +27,7 @@ mkdir pyenv
 cd pyenv
 python -m venv /path/to/src/django_tdd/pyenv
 Scripts\activate
-# OR in Linux
+-OR- in Linux
 source bin/activate
 ```
 To close environment type :
@@ -83,7 +83,7 @@ python manage.py runserver [8080]
 **Manage Database Backend**
 
 ```
-(pyenv) /path/django_tdd/contacts>python manage.py migrate
+(pyenv) /path/to/src/django_tdd/contacts>python manage.py migrate
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, sessions
 Running migrations:
@@ -102,7 +102,7 @@ Running migrations:
 
 Initialize the project root and add files to master repo :
 ```
-cd /path/to/django_tdd
+cd /path/to/src/django_tdd
 git help
 git help <command>
 git init
@@ -116,7 +116,7 @@ Perform the first sync or commit with GitHub :
 git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/7esting/django_tdd.git
--Or git remote add origin git@github.com:7esting/django_tdd.git
+-OR- git remote add origin git@github.com:7esting/django_tdd.git
 git push -u origin master
 ```
 
@@ -129,7 +129,7 @@ git push
 
 If push fails, check and set credentials on source host if needed. :
 ```
-cd /path/to/django_tdd
+cd /path/to/src/django_tdd
 git config -l
 git config user.name ”7esting”
 ```
@@ -201,9 +201,9 @@ Django follows the MTV design pattern, where
 /path/to/src/  <== Project(s) root directory
 (pyenv) web@ubuntu:/path/to/src$
 .
-└── django_tdd  <== django_tdd project root directory
+└── django_tdd  <== Project root directory
     ├── cheat_sheet.md
-    ├── contacts  <== Django project root directory
+    ├── contacts  <== Django 'contacts' project root directory
     │   ├── contacts
     │   │   ├── __init__.py
     │   │   ├── settings.py
