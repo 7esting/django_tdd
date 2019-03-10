@@ -9,7 +9,7 @@ Tasks
 - [x] Create Django app
 - [ ] Setup backend database
 
-Links:
+Links
 * https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 * YouTube video crash course in Django (https://youtu.be/D6esTdOLXh4)
 
