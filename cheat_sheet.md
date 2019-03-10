@@ -43,7 +43,9 @@ deactivate
 
 **Prepare virtual environment**
 ```
-cd /path/to/src/
+cd /path/to/src/pyenv
+-Activate virtual environment-
+(pyenv) /path/to/src/pyenv>
 python –version
 python -m pip --version
 python -m pip install --upgrade setuptools
@@ -63,8 +65,9 @@ In the Django web framework what is Projects vs. apps
 
 >*https://docs.djangoproject.com/en/2.1/intro/tutorial01/*
 
-**Create the Django project**
+**Create the Django project 'contacts' (see directory tree at bottom)**
 ```
+-Activate virtual environment-
 cd /path/to/src
 mkdir django_tdd
 cd django_tdd
@@ -80,9 +83,10 @@ mkdir ft
 cd ft
 ```
 
-**Now create an app within the project**
+**Now create an app within the 'contacts' project**
 ```
-cd user_contacts
+cd /path/to/src/django_tdd/contacts
+python manage.py startapp user_contacts
 ```
 
 **Start the development server [port is optional]**
