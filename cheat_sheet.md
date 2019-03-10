@@ -28,7 +28,7 @@ cd pyenv
 python -m venv /path/to/src/django_tdd/pyenv
 ```
 
-Activate/Deactivate python virtual environment :
+**Activate/Deactivate python virtual environment**
 ```
 -Activate-
 cd /path/to/src/django_tdd/
@@ -63,7 +63,7 @@ In the Django web framework what is Projects vs. apps
 
 >*https://docs.djangoproject.com/en/2.1/intro/tutorial01/*
 
-Create the Django project [Project root dir /path/to/src/django_tdd]:
+**Create the Django project**
 ```
 cd /path/to/src
 mkdir django_tdd
@@ -73,25 +73,25 @@ mkdir ft
 cd ft
 ```
 
-Create ft directory for functional test script(s) :
+**Create ft directory for functional test script(s)**
 ```
 cd /path/to/src/django_tdd
 mkdir ft
 cd ft
 ```
 
-Now create an app within the project:
+**Now create an app within the project**
 ```
 cd user_contacts
 ```
 
-Start the development server [port is optional] :
+**Start the development server [port is optional]**
 ```
-python manage.py runserver [8080]
+python manage.py runserver [tcp/port]
+pythone manage.py runserver 80
 ```
 
 **Manage Database Backend**
-
 ```
 (pyenv) /path/to/src/django_tdd/contacts>python manage.py migrate
 Operations to perform:
@@ -121,7 +121,7 @@ git add -A
 Create a .gitignore file and add the files and directoires that should not be synched or pushed to GitHub
 Also create a readme with markdown extension 'md' in wich the project is described.
 
-Perform the first sync or commit with GitHub :
+**Perform the first sync or commit with GitHub**
 ```
 git add README.md
 git commit -m "first commit"
@@ -130,14 +130,14 @@ git remote add origin https://github.com/7esting/django_tdd.git
 git push -u origin master
 ```
 
-Check GitHub to verify the previous commit succeded and commit and push again :
+**Check GitHub to verify the previous commit succeded and commit and push again**
 ```
 git status
 git commit -am "First commit"
 git push
 ```
 
-If push fails, check and set credentials on source host if needed. :
+**If push fails, check and set credentials on source host if needed.**
 ```
 cd /path/to/src/django_tdd
 git config -l
@@ -157,10 +157,7 @@ git push --set-upstream <name-of-new-branch>
 git push origin <name-of-new-branch>
 ```
 
-Switch to another branch :
-```
-git checkout -b <another-branch>
-```
+**Switch to another branch** `git checkout -b <another-branch>`
 
 Merging \<other-branch\> with master branch.
 Lets assume that we've been committing the latest changes to \<other-branch\>.
@@ -179,10 +176,7 @@ git push
 git status
 ```
 
-Deleting a branch :
-```
-git branch -d <name-of-branch>
-```
+**Deleting a branch** `git branch -d <name-of-branch>`
 
 **Fixing Untracked files (.gitignore) and Re-sync orgin with master**
 ```
