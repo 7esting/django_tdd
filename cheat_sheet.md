@@ -43,12 +43,16 @@ deactivate
 
 **Prepare virtual environment**
 ```
+cd /path/to/src/
 python –version
 python -m pip --version
 python -m pip install --upgrade setuptools
 python -m pip install --upgrade pip
 pip install django==2.1.7
 pip install selenium==3.141.0
+
+-Record pip modules installed in the virtual environment-
+pip freeze > requirements.txt
 ```
 
 **Start Contacts Django project and review the directory structure**
