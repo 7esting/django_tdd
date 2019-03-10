@@ -52,6 +52,7 @@ python -m pip install --upgrade setuptools
 python -m pip install --upgrade pip
 pip install django==2.1.7
 pip install selenium==3.141.0
+pip install gunicorn
 
 -Record pip modules installed in the virtual environment-
 pip freeze > requirements.txt
