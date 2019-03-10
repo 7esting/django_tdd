@@ -26,13 +26,19 @@ cd /path/to/src/django_tdd/
 mkdir pyenv
 cd pyenv
 python -m venv /path/to/src/django_tdd/pyenv
-Scripts\activate
+```
+
+Activate/Deactivate python virtual environment :
+```
+-Activate-
+cd /path/to/src/django_tdd/
+pyenv\Scripts\activate
 -OR- in Linux
-source bin/activate
-```
-To close environment type :
-```
-(pyenv) /path/to/src/django_tdd> deactivate
+source pyenv/bin/activate
+(pyenv) /path/to/src/django_tdd>
+
+-Deactivate from any working directory-
+deactivate
 ```
 
 **Prepare virtual environment**
