@@ -25,7 +25,8 @@ SECRET_KEY = '7kiy3se%el(0e68raenrph^za_3ww2ftiap@tb0^ov@la6_n4-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# By default empty bracket means 127.0.0.1
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'ubuntu.localdomain', '192.168.56.1', 'hector.ddns.info']
 
 
 # Application definition
@@ -74,13 +75,23 @@ WSGI_APPLICATION = 'contacts.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'myappdb',
+        'USER': 'hector',
+        'PASSWORD': 'hector',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -119,3 +130,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+################## Parameters were not set automatically
+STATIC_ROOT = '/home/web-admin/src/django_tdd/contacts/user_contacts/static/'
+
+#STATICFILES_DIRS = [
+#            os.path.join(BASE_DIR, "static"),
+#                '/home/web-admin/src/django_tdd/contacts/user_contacts/static/',
+#                ]
