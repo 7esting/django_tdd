@@ -132,9 +132,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 ################## Parameters were not set automatically
-STATIC_ROOT = '/home/web-admin/src/django_tdd/contacts/user_contacts/static/'
+#STATIC_ROOT = '/home/web-admin/src/django_tdd/contacts/user_contacts/static/'
 
-#STATICFILES_DIRS = [
-#            os.path.join(BASE_DIR, "static"),
-#                '/home/web-admin/src/django_tdd/contacts/user_contacts/static/',
-#                ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]

@@ -1,8 +1,14 @@
 {% extends "layout.html" %}
-
+{% load static %}
 {% block content %}
-  <ul>
-    <li><a href="/all">View Contacts</a></li>
-    <li><a href="/add">Add Contact</a></li>
-  </ul>
+<p><a href="https://rubikscode.net/2019/03/04/test-driven-development-tdd-with-python/" target="_blank">Test-driven development (TDD)</a> is a software development process that relies on the repetition of a very short development cycle: requirements are turned into very specific test cases, then the software is improved to pass the new tests, only. This is opposed to software development that allows software to be added that is not proven to meet requirements.</p>
+<hr>
+<p><a href="https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment" target="_blank">Automate your software delivery process using continuous integration and delivery (CI/CD) pipelines.</a>  
+   A pipeline helps you automate steps in your software delivery process, such as initiating automatic builds and then deploying to cloud instances.
+</p>
+<p>
+"The flowchart below is an example of one CD scenario easily modeled in Jenkins Pipeline:"
+<a href="https://jenkins.io/doc/book/pipeline/" target="_blank">[https://jenkins.io/doc/book/pipeline/]</a>
+<img src="{% static 'images/realworld-pipeline-flow.png' %}" alt="realworld-pipeline-flow">
+</p>                    
 {% endblock %}

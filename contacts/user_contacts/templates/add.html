@@ -2,7 +2,7 @@
 
 {% block content %}
   {% block subheader %}
-    Add Contact
+    <h2>Add Contact</h2>
   {% endblock %}
   <br>
   <form action="/create" method ="POST" role="form">
@@ -11,6 +11,4 @@
       {{ phone_form.as_p }}
       <input type ="submit" name ="Submit" class="btn btn-default" value ="Add">
   </form>
-      <br>
-      <a href="/">Return Home</a>
 {% endblock %}
