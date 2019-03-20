@@ -192,7 +192,7 @@ git commit -m "fixed untracked files"
 git push
 git status
 ```
-## Replace master branch's code and git history with stagin branch
+## Replace master branch's code and git history with staging branch
 *[https://www.nickang.com/replace-git-branch-code/]*
 ```
 # Rename master to old-master, staging to master
