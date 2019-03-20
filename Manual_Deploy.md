@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Manually deploying the app to a local machine 
 
 Setup djanjo_tdd project app on an instance running Ubuntu
@@ -175,6 +176,8 @@ python manage.py collectstatic
 ##
 
 =======
+=======
+>>>>>>> 560b3534994833b64370b8e05238d13b31f55493
 ## Manually deploying the app to a local machine 
 
 Setup djanjo_tdd project app on an instance running Ubuntu
@@ -350,4 +353,7 @@ python manage.py collectstatic
 ```
 ##
 
+<<<<<<< HEAD
 >>>>>>> linux-version
+=======
+>>>>>>> 560b3534994833b64370b8e05238d13b31f55493

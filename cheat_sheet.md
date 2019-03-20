@@ -161,6 +161,7 @@ git push --set-upstream <name-of-new-branch>
 -OR-
 git push origin <name-of-new-branch>
 ```
+Rename a branch `git branch -m master old-master`
 
 **Switch to another branch** `git checkout -b <another-branch>`
 
