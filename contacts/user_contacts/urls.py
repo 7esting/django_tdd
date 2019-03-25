@@ -16,3 +16,8 @@ urlpatterns = [
       url(r'^add/$', ViewTest.add),
       url(r'^create$', ViewTest.create),
 ]
+
+handler404 = 'mysite.views.my_custom_page_not_found_view'
+handler500 = 'mysite.views.my_custom_error_view'
+handler403 = 'mysite.views.my_custom_permission_denied_view'
+handler400 = 'mysite.views.my_custom_bad_request_view'

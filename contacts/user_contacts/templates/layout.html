@@ -7,70 +7,180 @@
         <link rel="stylesheet" id="ample-style-css" href="{% static 'css/style.css' %}" type="text/css" media="all">
         <link rel='icon' href="{% static 'images/python.ico' type='image/x-icon' %}"/ >
     </head>
-    <body class="wide">
-        <div id="page" class="hfeed site">
-            <header>
-                <div class="header">
-                    <div class="main-head-wrap inner-wrap clearfix">
-                        <div id="header-logo-image">
-                            <a href="/">
-                                <img src="{% static 'images/mylogo.png' %}" alt="Demo App">
-                            </a>
-                        </div>
-                        <div id="header-text" class="">
-                            <h1 id="site-title">
-                                <a href="/" title="Demo Application" rel="home">Demo Application</a>
-                            </h1>
-                            <p>Using Test-Driven Development</p>
-                        </div>
-<!-- navigation menu Start -->
-<div class="main-navigation">
-<!--
-<label for="toggle">&#9776;</label>
-<input type="checkbox" id="menu-toggle"/>
--->
-<ul class="menu">
-    <li><a href="/">Home</a></li>
-    <li><a href="#">Reference</a></li>
-    <li><a href="#">Docs</a></li>
-    <li><a href="#">Downloads</a></li>
-    <li>
-        <ul class="menu">
-            <li>
-            <!-- First Tier Drop Down -->        
-            <a href="#">Tutorials</a>         
-            <ul class="menu">
-                <li><a href="#">HTML/CSS</a></li>
-                <li><a href="#">jQuery</a></li>
-                <li><a href="#">Other</a></li>
-            </ul>
-            </li>
-        </ul>
-    </li>
-    <li><a href="/all">Contact</a></li>
-</ul>
+<body class="home page-template-default page page-id-2 wp-custom-logo siteorigin-panels  siteorigin-panels-home no-sidebar-full-width better-responsive-menu wide">
+<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header " role="banner">
+		<div class="header">
+			
+			<div class="main-head-wrap inner-wrap clearfix">
+				<div id="header-left-section">
+					
+						<div id="header-logo-image">
+							<a href="/" class="custom-logo-link" rel="home" itemprop="url"><img src="{% static 'images/mylogo.png' %}" class="custom-logo" alt="Qubit Entanglement" itemprop="logo" srcset="{% static 'images/mylogo.png' %}" sizes="(max-width: 400px) 100vw, 400px" width="400" height="428"></a>						</div><!-- #header-logo-image -->
+
+										<div id="header-text" class="">
+													<h1 id="site-title">
+								<a href="/" title="Demo Application" rel="home">Demo Application</a>
+							</h1>
+													<p id="site-description">Using Test-Driven Development</p>
+											</div>
+				</div><!-- #header-left-section -->
+
+				<div id="header-right-section">
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<p class="menu-toggle"></p>
+						<div class="menu-top-menu-container"><ul id="menu-top-menu" class="menu menu-primary-container" aria-expanded="false"><li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-14"><a href="/" aria-current="page">Home</a></li>
+<li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="/reference/">Reference</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="/downloads/">Downloads</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="/about-us/">About Us</a></li>
+<li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15"><a href="/blog/">Blog</a></li>
+<li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="/all/">Contact</a></li>
+</ul></div>					</nav>
+					<i class="fa fa-search search-top"></i>
+					<div class="search-form-top">
+						
+<form action="/" class="search-form searchform clearfix" method="get">
+   <div class="search-wrap">
+      <input type="text" placeholder="Search" class="s field" name="s">
+      <button class="search-icon" type="submit"></button>
+   </div>
+</form><!-- .searchform -->					</div>
+				</div>
+			</div><!-- .main-head-wrap -->
+			<div id="wp-custom-header" class="wp-custom-header"><img src="{% static 'images/bay_bridge_banner.png' %}" class="header-image" alt="Bay Bridge" width="1500" height="400"></div>		</div><!-- .header -->
+	</header><!-- end of header -->
+	<div class="main-wrapper">
+
+		
+   <div class="single-page clearfix">
+      <div class="inner-wrap">
+         <div id="primary">
+            <div id="content">
+
+               
+                  
+<article id="post-2" class="post-2 page type-page status-publish hentry">
+   
+   <div class="entry-content">
+      <div id="pl-2" class="panel-layout"><div id="pg-2-0" class="panel-grid panel-no-style"><div id="pgc-2-0-0" class="panel-grid-cell"><div id="panel-2-0-0-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="0"><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+{% block content %}
+{% endblock %}
 </div>
-<!-- navigation menu End -->
-                    </div>
-                    <img class="header-image" src="{% static 'images/bay_bridge_banner.png' %}" alt="Quantum Computing">
-                </div>
-            </header>
-            <div class="main-wrapper">
-                <div class="single-page clearfix">
-                    <div class="inner-wrap">
-                        <div class="siteorigin-widget-tinymce textwidget">
-                        {% block content %}
-                        {% endblock %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <footer id="colophon">
-                <div class="inner-wrap">
-                    <p><a href="https://www.research.ibm.com/ibm-q/" target="_blank">IBM Q</a> is an industry first initiative to build universal quantum computers for business and science. Our cross-disciplinary team is developing scalable quantum systems, and potential applications for the technology we make available today. IBM Q quantum devices are accessed using Qiskit, a modular, open-source programming framework. A worldwide network of Fortune 500 companies, academic institutions, and startups use IBM Q technology and collaborate with IBM Research to advance quantum computing.</p>
-                </div>
-            </footer>
+</div></div></div></div></div>   </div>
+
+   </article>
+                                             </div>
+                     </div>
+
+               </div><!-- .inner-wrap -->
+   </div><!-- .single-page -->
+
+         </div><!-- .main-wrapper -->
+<!-- ============================== FOOTER BEGINS HERE ============================== -->
+      <footer id="colophon">
+         <div class="inner-wrap">
+            
+<div class="footer-widgets-wrapper">
+   <div class="footer-widgets-area clearfix">
+      <div class="footer-box tg-one-fourth tg-column-odd">
+         <section id="text-3" class="widget widget_text">			<div class="textwidget"><a href="https://www.research.ibm.com/ibm-q/" target="_blank">IBM Q</a> is an industry first initiative to build universal quantum computers for business and science. Our cross-disciplinary team is developing scalable quantum systems, and potential applications for the technology we make available today. IBM Q quantum devices are accessed using Qiskit, a modular, open-source programming framework. A worldwide network of Fortune 500 companies, academic institutions, and startups use IBM Q technology and collaborate with IBM Research to advance quantum computing.</div>
+		</section>      </div>
+      <div class="footer-box tg-one-fourth tg-column-even">
+         		<section id="recent-posts-4" class="widget widget_recent_entries">		<h5 class="widget-title">Recent Posts</h5>		<ul>
+											<li>
+					<a href="/">Four New Year’s resolutions for your pet</a>
+									</li>
+											<li>
+					<a href="/">Tooth-friendly toys and treats for dogs</a>
+									</li>
+											<li>
+					<a href="/">Cat and Dog Wellness Seminar</a>
+									</li>
+											<li>
+					<a href="/">Cuttlebones: a healthy bird treat and a fascinating toy all in one</a>
+									</li>
+											<li>
+					<a href="/">Be fair to your fair fish</a>
+									</li>
+					</ul>
+		</section>      </div>
+      <div class="footer-box tg-one-fourth tg-after-two-blocks-clearfix tg-column-odd">
+         <section id="sow-button-2" class="widget widget_sow-button"><div class="so-widget-sow-button so-widget-sow-button-atom-888850e15bb6"><div class="ow-button-base ow-button-align-center">
+	<a href="/newsletter" class="ow-icon-placement-left ow-button-hover" target="_blank" rel="noopener noreferrer">
+		<span>
+			
+			Newsletter signup		</span>
+	</a>
+</div>
+</div></section>      </div>
+      <div class="footer-box tg-one-fourth tg-one-fourth-last tg-column-even">
+         <section id="sow-social-media-buttons-2" class="widget widget_sow-social-media-buttons"><div class="so-widget-sow-social-media-buttons so-widget-sow-social-media-buttons-atom-89da99b67902">
+<div class="social-media-button-container">
+	
+		<a class="ow-button-hover sow-social-media-button-facebook sow-social-media-button" title="Wisdom Pet Medicine on Facebook" aria-label="Wisdom Pet Medicine on Facebook" target="_blank" rel="noopener noreferrer" href="http://www.facebook.com/wisdom.pets">
+			<span>
+								<span class="sow-icon-fontawesome sow-fab" data-sow-icon=""></span>							</span>
+		</a>
+	
+		<a class="ow-button-hover sow-social-media-button-twitter sow-social-media-button" title="Wisdom Pet Medicine on Twitter" aria-label="Wisdom Pet Medicine on Twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/WisdomPets">
+			<span>
+								<span class="sow-icon-fontawesome sow-fab" data-sow-icon=""></span>							</span>
+		</a>
+	
+		<a class="ow-button-hover sow-social-media-button-pinterest sow-social-media-button" title="Wisdom Pet Medicine on Pinterest" aria-label="Wisdom Pet Medicine on Pinterest" target="_blank" rel="noopener noreferrer" href="http://www.pinterest.com/wisdompets/">
+			<span>
+								<span class="sow-icon-fontawesome sow-fab" data-sow-icon=""></span>							</span>
+		</a>
+	</div>
+</div></section><section id="weblizar_pf-2" class="widget widget_weblizar_pf"><h5 class="widget-title">   </h5>                <script type="text/javascript">
+       jQuery(document).ready(function(){
+            if ( jQuery("span").parents("#pinterest_large") ) {
+                var count = jQuery("#pinterest_large").addClass( "pinterest_large_btn" );
+                x = count;
+            }
+        });
+        </script>
+
+        <div id="pinterest_large" class="pinterest_large_btn">
+        <span class="PIN_1553322664771_button_follow" data-pin-log="button_follow" data-pin-href="https://www.pinterest.com/wisdompets/pins/follow/?guid=cz_S8CgK1KeL">Follow us on Pinterest</span>
         </div>
-        <script src="{% static 'js/main.js' %}"></script>
-    </body>
+        		
+        </section><section id="search-3" class="widget widget_search">
+<form action="/" class="search-form searchform clearfix" method="get">
+   <div class="search-wrap">
+      <input type="text" placeholder="Search" class="s field" name="s">
+      <button class="search-icon" type="submit"></button>
+   </div>
+</form><!-- .searchform --></section>      </div>
+   </div>
+</div>
+            <div class="footer-bottom clearfix">
+               <div class="copyright-info">
+                  <div class="copyright">Copyright © 2019 <a href="/" title="Wisdom Pet Medicine"><span>Demo Application</span></a>. Powered by <a href="https://www.djangoproject.com/" target="_blank" title="django"><span>django</span></a>. Theme: Ample by <a href="https://themegrill.com/themes/ample" target="_blank" title="ThemeGrill" rel="author"><span>ThemeGrill</span></a>.</div>               </div>
+
+               <div class="footer-nav">
+               <div class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-28"><a href="/" aria-current="page">Home</a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="/all/">Contact</a></li>
+<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="/blog/">Blog</a></li>
+</ul></div>               </div>
+            </div>
+         </div>
+      </footer>
+      <a href="#masthead" id="scroll-up" style="display: none;"><i class="fa fa-angle-up"></i></a>
+   </div><!-- #page -->
+   <link rel="stylesheet" id="sow-image-default-bd5cd9da0588-css" href="http://wisdompets.com/wp-content/uploads/siteorigin-widgets/sow-image-default-bd5cd9da0588.css?ver=5.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="sow-social-media-buttons-atom-89da99b67902-css" href="http://wisdompets.com/wp-content/uploads/siteorigin-widgets/sow-social-media-buttons-atom-89da99b67902.css?ver=5.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="siteorigin-widget-icon-font-fontawesome-css" href="http://wisdompets.com/wp-content/plugins/so-widgets-bundle/icons/fontawesome/style.css?ver=5.1.1" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/wisdompets.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://wisdompets.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.1"></script>
+<script type="text/javascript" src="http://wisdompets.com/wp-content/themes/ample/js/theme-custom.js?ver=5.1.1"></script>
+<script type="text/javascript" src="http://wisdompets.com/wp-content/themes/ample/js/navigation.js?ver=5.1.1"></script>
+<script type="text/javascript" src="http://wisdompets.com/wp-includes/js/wp-embed.min.js?ver=5.1.1"></script>
+<script type="text/javascript">document.body.className = document.body.className.replace("siteorigin-panels-before-js","");</script>
+<script id="PIN_1553322664771.f.callback[0]" type="text/javascript" charset="utf-8" src="https://log.pinterest.com/?guid=cz_S8CgK1KeL&amp;tv=2019031201&amp;type=pidget&amp;sub=www&amp;button_count=0&amp;follow_count=1&amp;pin_count=0&amp;profile_count=0&amp;board_count=0&amp;section_count=0&amp;xload=1&amp;lang=en&amp;nvl=en-US&amp;via=http%3A%2F%2Fwisdompets.com%2F&amp;callback=PIN_1553322664771.f.callback[0]"></script></body>
 </html>

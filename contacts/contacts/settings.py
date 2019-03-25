@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7kiy3se%el(0e68raenrph^za_3ww2ftiap@tb0^ov@la6_n4-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # By default empty bracket means 127.0.0.1
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'ubuntu.localdomain', '192.168.56.1', 'hector.ddns.info']
