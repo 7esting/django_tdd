@@ -135,6 +135,28 @@ git remote add origin https://github.com/7esting/django_tdd.git
 git push -u origin master
 ```
 
+A developer will pull the lastest changes from the branch before making creating or updating code on said branch to avoid conflicts when commiting.
+**Git pull** `git pull --help`
+...
+Assume the following history exists and the current branch is "master":
+
+                     A---B---C master on origin
+                    /
+               D---E---F---G master
+                   ^
+                   origin/master in your repository
+
+       Then "git pull" will fetch and replay the changes from the remote master branch since it diverged from the local master (i.e., E)
+       until its current commit (C) on top of master and record the result in a new commit along with the names of the two parent commits and
+       a log message from the user describing the changes.
+
+                     A---B---C origin/master
+                    /         \
+               D---E---F---G---H master
+
+       See git-merge(1) for details, including how conflicts are presented and handled.*
+...
+
 **Check GitHub to verify the previous commit succeded and commit and push again**
 ```
 git status
@@ -163,7 +185,7 @@ git push origin <name-of-new-branch>
 ```
 Rename a branch `git branch -m master old-master`
 
-**Switch to another branch** `git checkout -b <another-branch>`
+**Create a branch and check it out with a single command with -b option** `git checkout -b <another-branch>`
 
 Merging \<other-branch\> with master branch.
 Lets assume that we've been committing the latest changes to \<other-branch\>.
