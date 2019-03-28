@@ -8,56 +8,58 @@
         <link rel="stylesheet" id="ample-style-css" href="{% static 'css/style.css' %}" type="text/css" media="all">
         <link rel='icon' href="{% static 'images/python.ico' type='image/x-icon' %}"/ >
         <script src="{% static 'js/main.js' %}"></script>
+        <script src="{% static 'js/font-awesome.min.css' %}"></script>
     </head>
 <body class="home page-template-default page page-id-2 wp-custom-logo siteorigin-panels  siteorigin-panels-home no-sidebar-full-width better-responsive-menu wide">
 <div id="page" class="hfeed site">
-		<header id="masthead" class="site-header " role="banner">
-		<div class="header">
-			
-			<div class="main-head-wrap inner-wrap clearfix">
-				<div id="header-left-section">
-					
-						<div id="header-logo-image">
-							<a href="/" class="custom-logo-link" rel="home" itemprop="url"><img src="{% static 'images/mylogo.png' %}" class="custom-logo" alt="Qubit Entanglement" itemprop="logo" srcset="{% static 'images/mylogo.png' %}" sizes="(max-width: 400px) 100vw, 400px" width="400" height="428"></a>						</div><!-- #header-logo-image -->
+    <header id="masthead" class="site-header " role="banner">
+    <div class="header">
 
-										<div id="header-text" class="">
-													<h1 id="site-title">
-								<a href="/" title="Demo Application" rel="home">Demo Application</a>
-							</h1>
-													<p id="site-description">Using Test-Driven Development</p>
-											</div>
-				</div><!-- #header-left-section -->
+    <div class="main-head-wrap inner-wrap clearfix">
+    <div id="header-left-section">
 
-				<div id="header-right-section">
-					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<p class="menu-toggle"></p>
-						<div class="menu-top-menu-container">
-                     <ul id="menu-top-menu" class="menu menu-primary-container" aria-expanded="false">
-                        <li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-14"><a href="/" aria-current="page">Home</a></li>
-                        <li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="/reference/">Docs</a></li>
-                        <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="/downloads/">Downloads</a></li>
-                        <li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="/about-us/">About Us</a></li>
-                        <li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15"><a href="/blog/">Blog</a></li>
-                        <li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="/all/">Contact</a></li>
-                     </ul>
-                  </div>					
-               </nav>
-					<i class="fa fa-search search-top"></i>
-					<div class="search-form-top">
-						
+    <div id="header-logo-image">
+    <a href="/" class="custom-logo-link" rel="home" itemprop="url"><img src="{% static 'images/mylogo.png' %}" class="custom-logo" alt="Qubit Entanglement" itemprop="logo" srcset="{% static 'images/mylogo.png' %}" sizes="(max-width: 400px) 100vw, 400px" width="400" height="428"></a>
+                  </div><!-- #header-logo-image -->
+
+    <div id="header-text" class="">
+       <h1 id="site-title">
+       <a href="/" title="Demo Application" rel="home">Demo Application</a>
+    </h1>
+    <p id="site-description">Using Test-Driven Development</p>
+                  </div>
+    </div><!-- #header-left-section -->
+
+    <div id="header-right-section">
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+      <p class="menu-toggle"></p>
+      <div class="menu-top-menu-container">
+         <ul id="menu-top-menu" class="menu menu-primary-container" aria-expanded="false">
+            <li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-14"><a href="/" aria-current="page">Home</a></li>
+            <li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="/reference/">Docs</a></li>
+            <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="/downloads/">Downloads</a></li>
+            <li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="/about-us/">About Us</a></li>
+            <li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15"><a href="/blog/">Blog</a></li>
+            <li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="/all/">Contact</a></li>
+         </ul>
+      </div>					
+    </nav>
+    <i class="fa fa-search search-top"></i>
+    <div class="search-form-top">
+
 <form action="/" class="search-form searchform clearfix" method="get">
    <div class="search-wrap">
       <input type="text" placeholder="Search" class="s field" name="s">
       <button class="search-icon" type="submit"></button>
    </div>
 </form><!-- .searchform -->					</div>
-				</div>
-			</div><!-- .main-head-wrap -->
-			<div id="wp-custom-header" class="wp-custom-header"><img src="{% static 'images/bay_bridge_banner.png' %}" class="header-image" alt="Bay Bridge" width="1500" height="400"></div>		</div><!-- .header -->
-	</header><!-- end of header -->
-	<div class="main-wrapper">
+    </div>
+    </div><!-- .main-head-wrap -->
+    <div id="wp-custom-header" class="wp-custom-header"><img src="{% static 'images/bay_bridge_banner.png' %}" class="header-image" alt="Bay Bridge" width="1500" height="400"></div>		</div><!-- .header -->
+    </header><!-- end of header -->
+    <div class="main-wrapper">
 
-		
+
    <div class="single-page clearfix">
       <div class="inner-wrap">
          <div id="primary">
@@ -91,54 +93,54 @@
    <div class="footer-widgets-area clearfix">
       <div class="footer-box tg-one-fourth tg-column-odd">
          <section id="text-3" class="widget widget_text">			<div class="textwidget"><a href="https://www.research.ibm.com/ibm-q/" target="_blank">IBM Q</a> is an industry first initiative to build universal quantum computers for business and science. Our cross-disciplinary team is developing scalable quantum systems, and potential applications for the technology we make available today. IBM Q quantum devices are accessed using Qiskit, a modular, open-source programming framework. A worldwide network of Fortune 500 companies, academic institutions, and startups use IBM Q technology and collaborate with IBM Research to advance quantum computing.</div>
-		</section>      </div>
+    </section>      </div>
       <div class="footer-box tg-one-fourth tg-column-even">
          		<section id="recent-posts-4" class="widget widget_recent_entries">		<h5 class="widget-title">Recent Posts</h5>		<ul>
-											<li>
-					<a href="/">Provisioning infrastructure with Terraform</a>
-									</li>
-											<li>
-					<a href="/">AWS CloudFormation</a>
-									</li>
-											<li>
-					<a href="/">Docker Secrets</a>
-									</li>
-											<li>
-					<a href="/">GitHub - Collaboration with remote team members </a>
-									</li>
-											<li>
-					<a href="https://docs.ansible.com/ansible/latest/scenario_guides/guide_aws.html?highlight=cloudformation">Ansible - AWS CloudFormation</a>
-									</li>
-					</ul>
-		</section>      </div>
+    <li>
+    <a href="/">Provisioning infrastructure with Terraform</a>
+    </li>
+    <li>
+    <a href="/">AWS CloudFormation</a>
+    </li>
+    <li>
+    <a href="/">Docker Secrets</a>
+    </li>
+    <li>
+    <a href="/">GitHub - Collaboration with remote team members </a>
+    </li>
+    <li>
+    <a href="https://docs.ansible.com/ansible/latest/scenario_guides/guide_aws.html?highlight=cloudformation">Ansible - AWS CloudFormation</a>
+    </li>
+    </ul>
+    </section>      </div>
       <div class="footer-box tg-one-fourth tg-after-two-blocks-clearfix tg-column-odd">
          <section id="sow-button-2" class="widget widget_sow-button"><div class="so-widget-sow-button so-widget-sow-button-atom-888850e15bb6"><div class="ow-button-base ow-button-align-center">
-	<a href="/newsletter" class="ow-icon-placement-left ow-button-hover" target="_blank" rel="noopener noreferrer">
-		<span>
-			
-			Newsletter signup		</span>
-	</a>
+    <a href="/newsletter" class="ow-icon-placement-left ow-button-hover" target="_blank" rel="noopener noreferrer">
+    <span>
+
+    Newsletter signup		</span>
+    </a>
 </div>
 </div></section>      </div>
       <div class="footer-box tg-one-fourth tg-one-fourth-last tg-column-even">
          <section id="sow-social-media-buttons-2" class="widget widget_sow-social-media-buttons"><div class="so-widget-sow-social-media-buttons so-widget-sow-social-media-buttons-atom-89da99b67902">
 <div class="social-media-button-container">
-	
-		<a class="ow-button-hover sow-social-media-button-facebook sow-social-media-button" title="Wisdom Pet Medicine on Facebook" aria-label="Wisdom Pet Medicine on Facebook" target="_blank" rel="noopener noreferrer" href="/">
-			<span>
-								<span class="sow-icon-fontawesome sow-fab" data-sow-icon=""></span>							</span>
-		</a>
-	
-		<a class="ow-button-hover sow-social-media-button-twitter sow-social-media-button" title="Wisdom Pet Medicine on Twitter" aria-label="Wisdom Pet Medicine on Twitter" target="_blank" rel="noopener noreferrer" href="/">
-			<span>
-								<span class="sow-icon-fontawesome sow-fab" data-sow-icon=""></span>							</span>
-		</a>
-	
-		<a class="ow-button-hover sow-social-media-button-pinterest sow-social-media-button" title="Wisdom Pet Medicine on Pinterest" aria-label="Wisdom Pet Medicine on Pinterest" target="_blank" rel="noopener noreferrer" href="/">
-			<span>
-								<span class="sow-icon-fontawesome sow-fab" data-sow-icon=""></span>							</span>
-		</a>
-	</div>
+
+    <a class="ow-button-hover sow-social-media-button-facebook sow-social-media-button" title="Wisdom Pet Medicine on Facebook" aria-label="Wisdom Pet Medicine on Facebook" target="_blank" rel="noopener noreferrer" href="/">
+    <span>
+    <span class="sow-icon-fontawesome sow-fab" data-sow-icon=""></span>							</span>
+    </a>
+
+    <a class="ow-button-hover sow-social-media-button-twitter sow-social-media-button" title="Wisdom Pet Medicine on Twitter" aria-label="Wisdom Pet Medicine on Twitter" target="_blank" rel="noopener noreferrer" href="/">
+    <span>
+    <span class="sow-icon-fontawesome sow-fab" data-sow-icon=""></span>							</span>
+    </a>
+
+    <a class="ow-button-hover sow-social-media-button-pinterest sow-social-media-button" title="Wisdom Pet Medicine on Pinterest" aria-label="Wisdom Pet Medicine on Pinterest" target="_blank" rel="noopener noreferrer" href="/">
+    <span>
+    <span class="sow-icon-fontawesome sow-fab" data-sow-icon=""></span>							</span>
+    </a>
+    </div>
 </div></section><section id="weblizar_pf-2" class="widget widget_weblizar_pf"><h5 class="widget-title">   </h5>                <script type="text/javascript">
        jQuery(document).ready(function(){
             if ( jQuery("span").parents("#pinterest_large") ) {

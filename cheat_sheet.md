@@ -207,7 +207,7 @@ git push
 git status
 ```
 
-## NOTE: YOU cannot be on the branch you are deleting
+## NOTE: You cannot be on the branch you are deleting
 **Deleting local branch** `git branch -d <name-of-branch>`
 
 **Delete remote branch on Github**
