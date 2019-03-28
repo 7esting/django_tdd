@@ -174,7 +174,7 @@ Show value of user.name use `git config user.name`
 
 **Git Branching**
 
-Show branches, create a new branch, and push to new branch :
+Show branches, create a new branch and checkout with [-b], and push to new branch :
 ```
 git branch -a
 git remote show origin
@@ -200,11 +200,31 @@ git checkout master
 git merge <other-branch>
 git add -A
 git commit -am "Merged <other-branch> with master branch"
+git push --set-upstream origin <other-branch>
 git push
 git status
 ```
 
-**Deleting a branch** `git branch -d <name-of-branch>`
+## NOTE: YOU cannot be on the branch you are deleting
+**Deleting local branch** `git branch -d <name-of-branch>`
+
+**Delete remote branch on Github**
+```
+git branch
+* master
+git branch -r
+  origin/HEAD -> origin/master
+  origin/functional_tests
+  origin/linux-version
+  origin/master
+git push origin :linux-version
+To ssh://github.com/7esting/django_tdd.git
+ - [deleted]         linux-version
+git branch -r
+  origin/HEAD -> origin/master
+  origin/functional_tests
+  origin/master
+```
 
 **Fixing Untracked files (.gitignore) and Re-sync orgin with master**
 ```
@@ -214,6 +234,7 @@ git commit -m "fixed untracked files"
 git push
 git status
 ```
+
 ## Replace master branch's code and git history with staging branch
 *[https://www.nickang.com/replace-git-branch-code/]*
 ```
