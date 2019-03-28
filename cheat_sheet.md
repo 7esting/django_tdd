@@ -180,6 +180,7 @@ git branch -a
 git remote show origin
 git checkout -b <name-of-new-branch>
 git push --set-upstream <name-of-new-branch>
+-- <name-of-new-branch> ==> 'dev-branch'
 -- Branch 'dev-branch' set up to track remote branch 'dev-branch' from 'origin'.
 -OR-
 git push origin <name-of-new-branch>
