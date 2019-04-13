@@ -1,13 +1,36 @@
 ## 1.0 Cheat Sheet
 
-Simple django app thanks to [Real Python](https://realpython.com/), it has been very useful to me for learning how to create my first Django app.  I will also use this app to learn how to deploy apps to the cloud. Using Ansible and later Jenkins.
+Simple django app thanks to [Real Python](https://realpython.com/), it has been very useful to me for learning how to create my first Django app.  django uses the MTV(Model-Template-View) design pattern.
+* Model - Data access layer
+* Template - Presentation layer
+* View - Business logic layer
+
+```mermaid
+graph TD;
+    Project/Website-->BlogApp;
+    Project/Website-->WikiApp;
+    Project/Website-->InventoryApp;
+```
+```mermaid
+sequenceDiagram
+    participant Template
+    participant View
+    participant Model
+    participant PostgreSQL
+    Template->>View: Presentation layer
+    View->>Model: Business layer
+    Model->>PostgreSQL: Data access layer
+    PostgreSQL-->>Template: Data
+```
+
+I will also use this app to learn how to deploy apps to the cloud. Using Ansible and later Jenkins.
 
 Tasks
 - [x] Setup Python virtual environment
 - [x] Create Django procject
 - [x] Create GitHub repository
 - [x] Create Django app
-- [ ] Setup backend database
+- [x] Setup backend database
 
 Links
 * https://docs.djangoproject.com/en/2.1/intro/tutorial01/
@@ -58,7 +81,7 @@ pip install gunicorn
 pip freeze > requirements.txt
 ```
 
-**Start Contacts Django project and review the directory structure**
+**Start Django Contacts project and review the directory structure**
 
 In the Django web framework what is Projects vs. apps
 
@@ -105,12 +128,35 @@ Running migrations:
   No migrations to apply.
   Your models have changes that are not yet reflected in a migration, and so won't be applied.
   Run 'python manage.py makemigrations' to make new migrations, and then re-run 'python manage.py migrate' to apply them.
+
+  (pyenv) /path/to/src/django_tdd/contacts>python manage.py showmigrations
+admin
+ [X] 0001_initial
+ [X] 0002_logentry_remove_auto_add
+ [X] 0003_logentry_add_action_flag_choices
+auth
+ [X] 0001_initial
+ [X] 0002_alter_permission_name_max_length
+ [X] 0003_alter_user_email_max_length
+ [X] 0004_alter_user_username_opts
+ [X] 0005_alter_user_last_login_null
+ [X] 0006_require_contenttypes_0002
+ [X] 0007_alter_validators_add_error_messages
+ [X] 0008_alter_user_username_max_length
+ [X] 0009_alter_user_last_name_max_length
+contenttypes
+ [X] 0001_initial
+ [X] 0002_remove_content_type_name
+sessions
+ [X] 0001_initial
+user_contacts
+ [X] 0001_initial
 ```
 
-* python manage.py makemigrations    -- creates migration files based on your models
-* python manage.py migrate     -- will create the tables in your db based on the migration files created
+* `python manage.py makemigrations`    -- creates migration files based on your models
+* `python manage.py migrate`     -- will create the tables in your db based on the migration files created
   (see docs for more details on database migrations)
-* python manage.py createsuperuser    --will create a superuser for your application in the database (docs)
+* `python manage.py createsuperuser`    --will create a superuser for your application in the database (docs)
 
 
 **Versioning: After creating the repo on GitHub**
