@@ -345,4 +345,22 @@ python manage.py collectstatic
         alias /home/web-admin/src/django_tdd/contacts/static;
     }
 ```
+
+##
+## Pulling Updates from GitHub on remote cloud instance
+### Dev/Test/Staging -> GitHub -> Prod
+
+After making updates on dev-branch repo, from local dev machine, merge changes to the origin/master.
+
+**Keep local/master, remote/master, origin/master (in GitHub) as the HEAD branch*
+1. Checkout local/master branch `git checkout master`
+2. When collaborating with a team of developers make sure you pull any updates from remote/origin/master
+   to the local/master branch before merging your changes to the local/master. `git pull`
+3. Merge local/dev-branch to local/master `git merge dev-branch`
+3. Push changes from local/master to origin/master `git push`
+4. Go back to dev branch on local dev machine `git checkout dev-branch`
+
+**From Cloud instance**
+1. Pull from master branch off of GitHub `git pull` will fetch and replay
+   the changes from the remote master branch.
 ##
