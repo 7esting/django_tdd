@@ -169,6 +169,9 @@ git push
 cd /path/to/src/django_tdd
 git config -l
 git config user.name ”7esting”
+- OR -
+git config --global user.email "example@gmail.com"
+git config --global user.name "your name"
 ```
 Show value of user.name use `git config user.name`
 
