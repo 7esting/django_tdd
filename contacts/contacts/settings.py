@@ -135,5 +135,5 @@ STATIC_URL = '/static/'
 #STATIC_ROOT = '/home/web-admin/src/django_tdd/contacts/user_contacts/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static',)
 ]
